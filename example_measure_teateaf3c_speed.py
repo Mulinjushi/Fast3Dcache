@@ -1,6 +1,6 @@
 # /example_measure_teateaf3c_speed.py
 import os
-# os.environ['ATTN_BACKEND'] = 'xformers'
+
 os.environ['SPCONV_ALGO'] = 'native'
 
 import imageio
@@ -17,7 +17,7 @@ from trellis.pipelines import TrellisImageTo3DPipeline_tea
 
 from trellis.utils import render_utils, postprocessing_utils
 
-BASE_IMAGE_DIR = "/yangmengyu/experiment/TOY4K_transparent1/"
+BASE_IMAGE_DIR = "/root/autodl-tmp/experiment/TOY4K_transparent1"
 total_steps = 25
 
 print("Loading pipeline...")
@@ -45,7 +45,7 @@ f3c_args = edict({
     'anchor_step': anchor_step,
     'assumed_slope': -0.07,
     'full_sampling_end_steps': int(total_steps * 0.75),
-    'aggressive_cache_ratio': 0.8,
+    'aggressive_cache_ratio': 0.7,
     'final_phase_correction_freq': 3,
     'stability_T': 3,
     'ssc_w_A': 0.7,

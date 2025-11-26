@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 import torch
-os.environ['ATTN_BACKEND'] = 'xformers'
+
 os.environ['SPCONV_ALGO'] = 'native'
 
 current_dir = os.path.dirname(os.path.abspath(__file__))

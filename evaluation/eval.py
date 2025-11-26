@@ -7,7 +7,6 @@ import argparse
 from tqdm import tqdm
 import numpy as np
 
-os.environ['ATTN_BACKEND'] = 'xformers'
 os.environ['SPCONV_ALGO'] = 'native'
 
 try:

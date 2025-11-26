@@ -12,7 +12,7 @@ def parse_f3c_args():
 
     mode_group = parser.add_argument_group('Mode Control & Steps')
     mode_group.add_argument("--use_f3c", action="store_true", help="Fast3Dcache acceleration。")
-    mode_group.add_argument("--euler_steps", type=int, default=25, help="原生 Euler 模式下的总步数。")
+    mode_group.add_argument("--euler_steps", type=int, default=25, help="--")
     
     f3c_strategy_group = parser.add_argument_group('Fast3Dcache Scheduling Strategy')
     f3c_strategy_group.add_argument("--anchor_ratio", type=float, default=None, 
@@ -26,11 +26,10 @@ def parse_f3c_args():
                                      help="Phase 3 of Fast3Dcache。")
     f3c_strategy_group.add_argument("--final_phase_correction_freq", type=int, default=3,
                                      help="f_corr")
-    
 
     io_group = parser.add_argument_group('Trellis I/O & Internal Options')
     io_group.add_argument("--output_dir", type=str, default="outputs", help="--")
-    io_group.add_argument("--image_path", type=str, default="assets/example_image/typical_building_building.png", help="--。")
+    io_group.add_argument("--image_path", type=str, default="/root/autodl-tmp/Fast3Dcache/assets/example_image/typical_creature_elephant.png", help="--。")
     io_group.add_argument("--output_name", type=str, default="sample_output", help="--")
     io_group.add_argument("--seed", type=int, default=42, help="SEED。")
     io_group.add_argument("--resolution", type=int, default=16, help="Gs Stage。")

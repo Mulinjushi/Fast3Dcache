@@ -1,5 +1,5 @@
 import os
-# os.environ['ATTN_BACKEND'] = 'xformers'
+
 os.environ['SPCONV_ALGO'] = 'native' 
 
 import imageio
@@ -22,7 +22,7 @@ pipeline.cuda()
 pipeline1.cuda()
 print("Pipelines loaded.")
 
-image_path = "/yangmengyu/teacache/assets/example_image/typical_creature_elephant.png"
+image_path = "/root/autodl-tmp/Fast3Dcache/assets/example_image/typical_creature_dragon.png"
 if not os.path.exists(image_path):
     print(f"Warning: Image path not found: {image_path}")
     print("Using default image path: /root/TRELLIS_REFLOW/assets/example_image/typical_building_building.png")
@@ -38,7 +38,7 @@ f3c_args = edict({
     'anchor_step': anchor_step,
     'assumed_slope': -0.07,
     'full_sampling_end_steps': int(total_steps * 0.75),
-    'aggressive_cache_ratio': 0.8,
+    'aggressive_cache_ratio': 0.7,
     'final_phase_correction_freq': 3,
     'stability_T': 3,
     'ssc_w_A': 0.7,

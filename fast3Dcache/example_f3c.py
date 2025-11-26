@@ -2,7 +2,6 @@
 import sys
 import os
 os.environ['SPCONV_ALGO'] = 'native'
-os.environ['ATTN_BACKEND'] = 'xformers'
 
 current_file_path = os.path.abspath(__file__)
 current_dir = os.path.dirname(current_file_path)
