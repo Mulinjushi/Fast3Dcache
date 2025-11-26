@@ -24,12 +24,13 @@ Our approach is motivated by the observation of a **Three-Phase Stabilization Pa
   </div>
 
 ### 1. Predictive Caching Scheduler Constraint (PCSC)
-Instead of a fixed caching ratio, PCSC dynamically adjusts the caching budget over timesteps. It leverages the log-linear decay pattern of dynamic voxels to predict how many tokens can be safely cached at each step without harming the geometry structure.
+Instead of a fixed caching ratio, PCSC dynamically adjusts the caching budget over timesteps. It leverages the log-linear decay pattern of dynamic voxels to predict *how many* tokens can be safely cached at each step without harming the geometry structure.
 
 ### 2. Spatiotemporal Stability Criterion (SSC)
 To determine *which* specific tokens to cache, SSC evaluates voxel stability from two perspectives:
 * **Velocity Magnitude:** Reflects the intensity of feature updates.
 * **Acceleration Criterion:** Measures the stability of the velocity direction.
+
 By jointly considering these metrics, SSC identifies regions that have converged and can be safely reused.
 
 ## 📝 Citation
