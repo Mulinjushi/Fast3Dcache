@@ -13,13 +13,7 @@ AGI Lab,Westlake University
 
 ## 📖 Abstract
 
-Diffusion models have achieved impressive generative quality across modalities like 3D shapes, but their inference remains computationally expensive due to the iterative denoising process. While recent caching-based methods effectively reuse redundant computations for 2D/Video, directly applying them to 3D diffusion models can disrupt geometric consistency.
-
-To overcome this, we propose **Fast3Dcache**, a training-free geometry-aware caching framework that accelerates 3D diffusion inference while preserving geometric fidelity. Our method introduces:
-1.  **Predictive Caching Scheduler Constraint (PCSC)**: Dynamically determines cache quotas according to voxel stabilization patterns.
-2.  **Spatiotemporal Stability Criterion (SSC)**: Selects stable features for reuse based on velocity magnitude and acceleration criteria.
-
-Comprehensive experiments show that Fast3Dcache accelerates inference significantly (up to **27.12% speed-up** and **54.8% FLOPs reduction** on TRELLIS) with minimal degradation in geometric quality.
+Diffusion models have achieved impressive generative quality across modalities like 2D images, videos, and 3D shapes, but their inference remains computationally expensive due to the iterative denoising process. While recent caching-based methods effectively reuse redundant computations to speed up 2D and video generation, directly applying these techniques to 3D diffusion models can severely disrupt geometric consistency. In 3D synthesis, even minor numerical errors in cached latent features accumulate, causing structural artifacts and topological inconsistencies. To overcome this limitation, we propose Fast3Dcache, a training-free geometry-aware caching framework that accelerates 3D diffusion inference while preserving geometric fidelity. Our method introduces a Predictive Caching Scheduler Constraint (PCSC) to dynamically determine cache quotas according to voxel stabilization patterns and a Spatiotemporal Stability Criterion (SSC) to select stable features for reuse based on velocity magnitude and acceleration criterion. Comprehensive experiments show that Fast3Dcache accelerates inference significantly, achieving up to a 27.12% speed-up and a 54.8% reduction in FLOPs, with minimal degradation in geometric quality as measured by Chamfer Distance (2.48%) and F-Score (1.95%). 
 
 ## 🚀 Method
 
