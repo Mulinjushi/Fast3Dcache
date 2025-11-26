@@ -29,7 +29,7 @@ Instead of a fixed caching ratio, PCSC dynamically adjusts the caching budget ov
 ### 2. Spatiotemporal Stability Criterion (SSC)
 To determine *which* specific tokens to cache, SSC evaluates voxel stability from two perspectives:
 * **Velocity Magnitude:** Reflects the intensity of feature updates.
-* **Acceleration Criterion:** Measures the stability of the velocity direction.
+* **Acceleration Criterion:** Quantify the potential error incurred by approximating the current velocity with the previous step.
 
 By jointly considering these metrics, SSC identifies regions that have converged and can be safely reused.
 
