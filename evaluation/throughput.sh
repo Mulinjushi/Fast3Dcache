@@ -1,0 +1,1 @@
+python eval.py --use_f3c --input_dir /root/autodl-tmp/experiment/TOY4K_transparent1 --euler_steps 25 --full_sampling_ratio 0.2 --full_sampling_end_ratio 0.75 --anchor_ratio 0.24 --assumed_slope -0.07
